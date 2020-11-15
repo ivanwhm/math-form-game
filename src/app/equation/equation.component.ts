@@ -20,7 +20,11 @@ export class EquationComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.mathForm.statusChanges.subscribe((value) => {
+      console.log(value);
+    });
+  }
 
   get a(): number {
     return this.mathForm.value.a;
