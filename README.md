@@ -1,6 +1,6 @@
-# Wikipedia Search
+# Math Game with Forms and RxJs
 
-A Wikipedia Search made in Angular. This code is part of [The Modern Angular Bootcamp [2020]](https://www.udemy.com/course/the-modern-angular-bootcamp/) course available on [Udemy](https://www.udemy.com/course/the-modern-angular-bootcamp/)
+A simpler game to deal with forms and RxJs in Angular. This code is part of [The Modern Angular Bootcamp [2020]](https://www.udemy.com/course/the-modern-angular-bootcamp/) course available on [Udemy](https://www.udemy.com/course/the-modern-angular-bootcamp/)
 
 Made with &hearts; by Ivan Wilhelm.
 
