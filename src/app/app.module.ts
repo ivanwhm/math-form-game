@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { EquationComponent } from './equation/equation.component';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule],
-  providers: [],
+  declarations: [AppComponent, EquationComponent],
+  imports: [BrowserModule, ReactiveFormsModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
