@@ -1,6 +1,6 @@
 import { Directive, ElementRef, OnInit } from '@angular/core';
 import { NgControl } from '@angular/forms';
-import { filter, map } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 
 @Directive({
   selector: '[appAnswerHighlight]',
@@ -10,10 +10,13 @@ export class AnswerHighlightDirective implements OnInit {
 
   ngOnInit(): void {
     this.controlName.control.parent.valueChanges
-      .pipe(
-        map(({ a, b, answer }) => Math.abs((a + b - answer) / (a + b))),
-        filter((value: number) => value < 0.2)
-      )
-      .subscribe(() => {});
+      .pipe(map(({ a, b, answer }) => Math.abs((a + b - answer) / (a + b))))
+      .subscribe((value: number) => {
+        if (value < 0.2) {
+          this.el.nativeElement.classList.add('close');
+        } else {
+          this.el.nativeElement.classList.remove('close');
+        }
+      });
   }
 }
